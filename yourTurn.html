@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous"referrerpolicy="no-referrer"></script>
+<div style='width: 1000px'>
+  <canvas id="myChart"></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx , {
+    type: 'bar',
+    data: {
+      labels: ['Indie', 'Rap', 'Lofi', 'EDM', 'Alt Rock'],
+      datasets: [{
+        label: '# of Votes',
+        data: [4, 0, 1, 1, 1],
+        backgroundColor: [
+          'rgba(147,76,92,0.2)',
+          'rgba(255, 30, 30, 0.2)',
+          'rgba(111,111,255,0.2)',
+          'rgba(255, 128, 0, 0.2)',
+          'rgba(50, 238, 255, 0.2)'
+        ],
+        borderColor: [
+          'rgb(90,74,78)',
+          'rgba(255, 30, 30, 1)',
+          'rgb(131,131,251)',
+          'rgba(255, 128, 0, 1)',
+          'rgb(50,238,255, 1)'
+        ],
+        borderWidth: 5
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+    }
+  });
+</script>
+</body>
+</html>
